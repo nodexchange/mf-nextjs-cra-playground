@@ -1,0 +1,108 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "allowImportExportEverywhere": true
+  },
+  "plugins": ["import"],
+  "extends": ["./node_modules/@glu/eslint-config", "airbnb", "airbnb/hooks"],
+  "rules": {
+    "react/jsx-one-expression-per-line": "off",
+    "jsx-a11y/href-no-hash": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "import/no-self-import": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-duplicates": 0,
+    "import/no-named-as-default-member": 0,
+    "import/no-cycle": 0,
+    "import/no-useless-path-segments": 0,
+    "import/extensions": 0,
+    "import/named": 0,
+    "import/order": 0,
+    "class-methods-use-this": 1,
+    "prefer-promise-reject-errors": 0,
+    "max-len": [
+      "error",
+      120,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "comma-dangle": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/destructuring-assignment": 0,
+    "react/no-access-state-in-setstate": 1, // revisit this rule,
+    /**
+     * The prop-spreading rule has been disabled because it is so fundamental to how
+     * our project works. We should consider enabling it, but be prepared to do a major
+     * refactor if we do.
+     */
+    "react/jsx-props-no-spreading": 0,
+    "space-infix-ops": 0,
+    "no-duplicate-imports": 0,
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": 1,
+        "outerIIFEBody": 1,
+        // MemberExpression: null,
+        "FunctionDeclaration": {
+          "parameters": 1,
+          "body": 1
+        },
+        "FunctionExpression": {
+          "parameters": 1,
+          "body": 1
+        },
+        "CallExpression": {
+          "arguments": 1
+        },
+        "ArrayExpression": 1,
+        "ObjectExpression": 1,
+        "ImportDeclaration": 1,
+        "flatTernaryExpressions": false,
+        // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
+        "ignoredNodes": [
+          // fix Cannot read property 'range' of null
+          "TemplateLiteral",
+          "JSXElement",
+          "JSXElement > *",
+          "JSXAttribute",
+          "JSXIdentifier",
+          "JSXNamespacedName",
+          "JSXMemberExpression",
+          "JSXSpreadAttribute",
+          "JSXExpressionContainer",
+          "JSXOpeningElement",
+          "JSXClosingElement",
+          "JSXText",
+          "JSXEmptyExpression",
+          "JSXSpreadChild"
+        ],
+        "ignoreComments": false
+      }
+    ],
+    "template-curly-spacing": ["off"]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.spec.js*", "**/*.test.js*"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}

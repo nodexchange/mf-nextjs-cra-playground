@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "dev": "lerna run --scope @emp/* --parallel dev",
-    "build": "lerna run --scope @emp/* --parallel build",
-    "start": "lerna run --scope @emp/* --parallel start"
+    "dev": "lerna run --scope @playground/* --parallel dev",
+    "build": "lerna run --scope @playground/* --parallel build",
+    "start": "lerna run --scope @playground/* --parallel start"
   },
   "dependencies": {
     "lerna": "^3.22.1"

@@ -1,6 +1,6 @@
 const Home = () => (
   <>
-    <h1>Nextjs HOME COMPONENT</h1>
+    <h1>Payment Module</h1>
   </>
 )
 export default Home
