@@ -15,6 +15,7 @@ module.exports = {
       remotes: {},
       exposes: {
         './nav': './components/nav',
+        './home': './pages/index',
       },
     }
 

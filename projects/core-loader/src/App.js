@@ -4,8 +4,9 @@ import NextComp from './components/NextComp'
 
 const App = () => (
   <div>
-    {/* <Dynamic /> */}
+    <Dynamic />
     <NextComp scope="nextClient" module="./nav" />
+    {/* <NextComp scope="nextClient" module="./home" /> */}
     <h1>I am the CORE LOADER</h1>
   </div>
 )

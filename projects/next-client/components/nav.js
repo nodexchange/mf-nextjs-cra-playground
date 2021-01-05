@@ -1,4 +1,3 @@
-// import React from 'react'
 const links = [
   {href: 'https://zeit.co/now', label: 'ZEIT'},
   {href: 'https://github.com/zeit/next.js', label: 'GitHub'},
@@ -11,10 +10,14 @@ const Nav = () => (
   <nav>
     <ul>
       <li>
-        <a>Next Home</a>
+        {/* <Link href="/"> */}
+        <a>Home</a>
+        {/* </Link> */}
       </li>
       <li>
+        {/* <Link href="/"> */}
         <a>NEXT JS CLIENT</a>
+        {/* </Link> */}
       </li>
       {links.map(({key, href, label}) => (
         <li key={key}>
